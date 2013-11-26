@@ -70,8 +70,11 @@ return 1;
     
     PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLocation:location];
     PFQuery *locationQuery = [PFUser query];
+    PFUser *user = [PFUser currentUser];
 
     [locationQuery whereKey:@"location" nearGeoPoint:userGeoPoint withinKilometers:0.05];
+    
+    [locationQuery whereKey:@"objectId" notEqualTo:[user valueForKey:@"objectId"]];
 
 
 //// Limit what could be a lot of points.
@@ -81,7 +84,12 @@ locationQuery.limit = 50;
 
 usersNearMeArray = [[NSMutableArray alloc] init];
 usersNearMeArray = [locationQuery findObjects].mutableCopy;
+if (usersNearMeArray.count != 0)
+    {
     return usersNearMeArray.count;
+    } else {
+    return 0;
+    }
 }
 
 -(CollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,8 +99,13 @@ usersNearMeArray = [locationQuery findObjects].mutableCopy;
     
     PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLocation:location];
     PFQuery *locationQuery = [PFUser query];
+    PFUser *user = [PFUser currentUser];
 
     [locationQuery whereKey:@"location" nearGeoPoint:userGeoPoint withinKilometers:0.05];
+    
+    //This causes an error when uncommented.  Not sure why.  Need to remove current user from array.
+    [locationQuery whereKey:@"objectId" notEqualTo:[user valueForKey:@"objectId"]];
+
 
 
 //// Limit what could be a lot of points.

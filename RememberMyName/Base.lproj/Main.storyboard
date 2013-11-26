@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="647" y="44"/>
         </scene>
-        <!--View Controller - settings-->
+        <!--Settings View Controller - settings-->
         <scene sceneID="gTk-mQ-OsF">
             <objects>
-                <viewController id="sVT-TD-Wch" sceneMemberID="viewController">
+                <viewController id="sVT-TD-Wch" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kgl-jv-elp"/>
                         <viewControllerLayoutGuide type="bottom" id="aP2-hu-jQc"/>
@@ -53,7 +53,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VXs-Jn-lzA">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VXs-Jn-lzA" id="8b6-k7-NQJ">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -65,7 +65,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="settings" id="iGn-g6-E6g"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="002-ya-fIF"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="settings" id="iGn-g6-E6g">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="cXe-bS-lzt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2BY-z9-6jH">
+                                <rect key="frame" x="233" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3fP-Ns-Vbp" kind="push" identifier="SegueFromSettingsVCToMainVC" id="BK5-dv-O2J"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cj7-F2-frL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="1723" y="750"/>
         </scene>
-        <!--View Controller - saved users-->
+        <!--Saved Users View Controller - saved users-->
         <scene sceneID="1N8-me-hby">
             <objects>
-                <viewController id="rOu-Ah-YeK" sceneMemberID="viewController">
+                <viewController id="rOu-Ah-YeK" customClass="SavedUsersViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kJf-ck-ytS"/>
                         <viewControllerLayoutGuide type="bottom" id="zfO-cf-k32"/>
@@ -179,6 +198,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="saved users" id="ikT-dN-ac2"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPg-cf-SPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,6 +361,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="fSY-Xs-Vx3"/>
+        <segue reference="BK5-dv-O2J"/>
     </inferredMetricsTieBreakers>
 </document>
