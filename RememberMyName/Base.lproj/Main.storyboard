@@ -214,6 +214,9 @@
                                                     <state key="normal" title="Update">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onUpdatePhotoButtonPressed:" destination="QnJ-bK-tBg" eventType="touchUpInside" id="J1J-uU-cXe"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -277,6 +280,7 @@
                     <navigationItem key="navigationItem" id="6oc-GN-KST"/>
                     <connections>
                         <outlet property="emailTextField" destination="DB4-2S-5wb" id="xfy-WX-LsD"/>
+                        <outlet property="imageView" destination="kra-Jw-Rp1" id="edw-WJ-1my"/>
                         <outlet property="nameTextField" destination="NCt-yp-Xkg" id="ZmP-GZ-TKY"/>
                         <outlet property="phoneTextField" destination="POz-BG-wuE" id="UIe-AS-ykh"/>
                         <outlet property="twitterTextField" destination="y3A-5S-Rli" id="Xir-wL-fG8"/>
