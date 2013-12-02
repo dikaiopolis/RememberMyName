@@ -10,7 +10,7 @@
 
 @interface MainViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
--(void)findCurrentLocation;
+-(void)runParseQuery;
 - (IBAction)onSettingsButtonPressed:(id)sender;
 
 @end
