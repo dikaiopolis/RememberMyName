@@ -27,15 +27,16 @@
 
 }
 
-- (void)didReceiveMemoryWarning
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if (indexPath.row == 5)
+    {
+
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"logOutSegue" sender:self];
+    }
+
 }
-
-#pragma mark - Table view data source
-
-
 
 
 @end

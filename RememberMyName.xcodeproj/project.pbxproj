@@ -38,6 +38,8 @@
 		C2297B0B183EAB70007D6B6E /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2297B0A183EAB70007D6B6E /* SplashScreenViewController.m */; };
 		C2297B0E183EAD29007D6B6E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2297B0D183EAD29007D6B6E /* LoginViewController.m */; };
 		C2297B11183EB4F0007D6B6E /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2297B10183EB4F0007D6B6E /* NewAccountViewController.m */; };
+		C2545821184CFB4D00D03AC1 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2545820184CFB4D00D03AC1 /* UserDetailViewController.m */; };
+		C2545824184CFC7E00D03AC1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C2545823184CFC7E00D03AC1 /* Person.m */; };
 		C2F3E5FB183EC884004583D2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F3E5FA183EC884004583D2 /* Parse.framework */; };
 		C2F3E5FE183ECCFC004583D2 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F3E5FD183ECCFC004583D2 /* CollectionViewCell.m */; };
 		C2FB56751846A3B500F8BB81 /* MyProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FB56741846A3B500F8BB81 /* MyProfileTableViewController.m */; };
@@ -97,6 +99,10 @@
 		C2297B0D183EAD29007D6B6E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C2297B0F183EB4F0007D6B6E /* NewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAccountViewController.h; sourceTree = "<group>"; };
 		C2297B10183EB4F0007D6B6E /* NewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAccountViewController.m; sourceTree = "<group>"; };
+		C254581F184CFB4D00D03AC1 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		C2545820184CFB4D00D03AC1 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		C2545822184CFC7E00D03AC1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C2545823184CFC7E00D03AC1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		C2F3E5FA183EC884004583D2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C2F3E5FC183ECCFC004583D2 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		C2F3E5FD183ECCFC004583D2 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
@@ -240,6 +246,8 @@
 				C2297B0A183EAB70007D6B6E /* SplashScreenViewController.m */,
 				C2297B0D183EAD29007D6B6E /* LoginViewController.m */,
 				C2297B0C183EAD29007D6B6E /* LoginViewController.h */,
+				C254581F184CFB4D00D03AC1 /* UserDetailViewController.h */,
+				C2545820184CFB4D00D03AC1 /* UserDetailViewController.m */,
 				C2FB56731846A3B500F8BB81 /* MyProfileTableViewController.h */,
 				C2FB56741846A3B500F8BB81 /* MyProfileTableViewController.m */,
 				C2297B0F183EB4F0007D6B6E /* NewAccountViewController.h */,
@@ -257,6 +265,8 @@
 		C2297AF4183E982F007D6B6E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C2545822184CFC7E00D03AC1 /* Person.h */,
+				C2545823184CFC7E00D03AC1 /* Person.m */,
 				C22604731845191600F5B2F3 /* LeftToRightSegue.h */,
 				C22604741845191600F5B2F3 /* LeftToRightSegue.m */,
 				C2F3E5FC183ECCFC004583D2 /* CollectionViewCell.h */,
@@ -374,7 +384,9 @@
 				C2297ACF183E815C007D6B6E /* AppDelegate.m in Sources */,
 				C2297ACB183E815C007D6B6E /* main.m in Sources */,
 				C2F3E5FE183ECCFC004583D2 /* CollectionViewCell.m in Sources */,
+				C2545824184CFC7E00D03AC1 /* Person.m in Sources */,
 				C2297B0E183EAD29007D6B6E /* LoginViewController.m in Sources */,
+				C2545821184CFB4D00D03AC1 /* UserDetailViewController.m in Sources */,
 				C226047D1845299700F5B2F3 /* SavedUsersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,7 +516,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/danielbaldwin/Dropbox/RememberMyName,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RememberMyName/RememberMyName-Prefix.pch";
@@ -521,7 +533,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/danielbaldwin/Dropbox/RememberMyName,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RememberMyName/RememberMyName-Prefix.pch";
